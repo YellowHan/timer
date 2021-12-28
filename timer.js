@@ -34,6 +34,7 @@ document.getElementById("start").onclick = function () {
 };
 document.getElementById("reset").onclick = function () {
   clearInterval(timeoutId);
+  active = false;
   hour = 0;
   minute = 0;
   second = 0;
