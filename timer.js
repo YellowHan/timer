@@ -19,10 +19,6 @@ document.getElementById("start").onclick = function () {
           }
         }
       }
-      document.getElementById("stop").onclick = function () {
-        clearInterval(timeoutId);
-        active = false;
-      };
       document.getElementById("time").innerText =
         (hour < 10 ? "0" + hour : hour) +
         ":" +
@@ -31,6 +27,10 @@ document.getElementById("start").onclick = function () {
         (second < 10 ? "0" + second : second);
     }, 1000);
   }
+};
+document.getElementById("stop").onclick = function () {
+  clearInterval(timeoutId);
+  active = false;
 };
 document.getElementById("reset").onclick = function () {
   clearInterval(timeoutId);
